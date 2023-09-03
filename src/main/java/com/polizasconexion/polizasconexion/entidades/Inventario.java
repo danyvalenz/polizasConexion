@@ -10,5 +10,5 @@ import lombok.NoArgsConstructor;
 public class Inventario {
     private Long sku;
     private Integer cantidad;
-    private String nombre;
+    private String nombrearticulo;
 }
