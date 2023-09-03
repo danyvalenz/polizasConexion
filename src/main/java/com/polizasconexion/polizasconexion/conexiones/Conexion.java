@@ -21,7 +21,7 @@ public class Conexion {
 
     private static final Logger LOG = Logger.getLogger(String.valueOf(Conexion.class));
     private Connection conexion;
-    private String cadenacon;
+    private String cadenaconpavel;
     private String username;
     private String password;
     public Connection abrirConectionPostgresql()
@@ -29,7 +29,7 @@ public class Conexion {
 
         try {
             Class.forName("org.postgresql.Driver");
-            this.conexion = DriverManager.getConnection(cadenacon,username,password);
+            this.conexion = DriverManager.getConnection(cadenaconpavel,username,password);
         }catch (Exception e)
         {
             String logError = "Error al intentar conectarse al servidor" + e;

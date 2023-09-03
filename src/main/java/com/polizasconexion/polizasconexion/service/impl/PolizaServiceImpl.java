@@ -21,6 +21,8 @@ public class PolizaServiceImpl implements PolizaService {
     @Override
     public ResponseDTO obtenerPoliza(Integer idPoliza) {
         ResponseDTO responseDTO = new ResponseDTO();
+
+
         Meta meta = new Meta();
         PolizasEmpleadosDetalleDTO polizasEmpleadosDetalle = polizaRepository.obtenerPoliza(idPoliza);
         if (polizasEmpleadosDetalle.getPoliza() != null)

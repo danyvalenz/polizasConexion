@@ -34,7 +34,7 @@ public class PolizaRepository {
         try {
             this.con = conexion.abrirConectionPostgresql();
            // if (conexion.conexionPostgresql()) {
-                sql = String.format("select poliza,cantidad,nombreempleado,apellidoempleado,skuinventario,nombrearticulo from fun_obtenerpoliza($$%d$$);", idPoliza);
+                sql = String.format("select poliza,cantidad,nombreempleado,apellidoempleado,skuinventario,nombrearticulo from fun_obtenerpoliza($$%d$$);",idPoliza );
                 //ResultSet entry = conexion.exec(sql); //
                 PreparedStatement statement = con.prepareCall(sql);
                 resultSet = statement.executeQuery();
@@ -149,4 +149,7 @@ public class PolizaRepository {
         }
         return status;
     }
+
+
+
 }
